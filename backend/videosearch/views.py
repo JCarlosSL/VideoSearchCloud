@@ -80,6 +80,6 @@ class FilterVideoAPIview(APIView):
             data.append({'name': row[1], 
                             'etiqueta':row[0],
                             'url_video': 'storage.googleapis.com/videosearch/'+row[1]+'.mp4',
-                            'url_gif': 'storage.cloud.google.com/video-gifs/'+row[1],
-                            'url_image':'storage.cloud.google.com/video-thumbs/'+row[1]})
+                            'url_gif': 'storage.googleapis.com/video-gifs/'+row[1]+'.gif',
+                            'url_image':'storage.googleapis.com/video-thumbs/'+row[1]+'.png'})
         return Response(data, status=status.HTTP_200_OK)
